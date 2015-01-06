@@ -9,37 +9,37 @@
 
 	prompt(" Hello Welcome To Jon's Program -____- ");
 
+	// User's input First and last name
  	var first = prompt(" Enter your First Name: ");
 
  	var last = prompt(" Enter your Last Name: ");
 
+ 	// Calling the FullName function to add the name together
  	var userName =  FullName(first,last);
 
  	var input = 0;
 
  	prompt(" Hello " + userName + " it's nice to meet you");
 
- 	var movies = [{
- 			name:"StarWars", 
- 			rating: [1,2,3,4,5]
- 	}];
-
- 	console.log(movies[0].rating[0]);
-
- 	movies.push({name:"Hello"});
-
- 	console.log(movies[1].name)
-
- 	// while(input != 4){
+ 	var movieList = ["Star Wars",];
 
 
- 	// 	for( i = 0; i < movies.length;i++){
- 	// 	input = prompt(userName + "  This is your movie List Movie List"
- 	// 		+ movies[i]+ \n);
- 	// 	}
+ 	prompt("Welcome " + userName + " your Movie List");
+
+ 	while(input != 4){
 
 
- 	// }
+ 		for( var i = 0; i < movieList.length;i++){
+ 		input = prompt(userName + "'s Movie List" + "\n" +
+ 		"----------------------------" + "\n" +
+ 		 movieList[i] + "\n" +
+		"----------------------------" + "\n" +
+		"1)Add" + "\n" +
+		"2)Delete" + "\n");
+ 		}
+
+
+ 	}
 
 
 
