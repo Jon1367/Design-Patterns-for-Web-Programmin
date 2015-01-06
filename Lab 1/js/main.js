@@ -7,14 +7,33 @@
 (function(){
 
 
-prompt(" Hello Welcome To Jon's Program -____- ");
+	prompt(" Hello Welcome To Jon's Program -____- ");
 
- var first = prompt(" Enter your First Name: ");
+ 	var first = prompt(" Enter your First Name: ");
 
- var last = prompt(" Enter your Last Name: ");
+ 	var last = prompt(" Enter your Last Name: ");
+
+ 	var userName =  FullName(first,last);
+
+ 	var input = 0;
+
+ 	prompt(" Hello " + userName + " it's nice to meet you");
+
+ 	var movies = [StarWars {rating:1}]
+
+ 	while(input != 4){
 
 
- prompt(" Hello " + FullName(first,last) + " it's nice to meet you");
+ 		for( i = 0; i < movies.length;i++){
+ 		input = prompt(userName + "  This is your movie List Movie List"
+ 			+ movies[i]+ \n);
+ 		}
+
+
+ 	}
+
+
+
 
 })();
 function FullName(first, last){
