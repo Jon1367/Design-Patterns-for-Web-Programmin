@@ -19,18 +19,27 @@
 
  	prompt(" Hello " + userName + " it's nice to meet you");
 
- 	var movies = [StarWars {rating:1}]
+ 	var movies = [{
+ 			name:"StarWars", 
+ 			rating: [1,2,3,4,5]
+ 	}];
 
- 	while(input != 4){
+ 	console.log(movies[0].rating[0]);
+
+ 	movies.push({name:"Hello"});
+
+ 	console.log(movies[1].name)
+
+ 	// while(input != 4){
 
 
- 		for( i = 0; i < movies.length;i++){
- 		input = prompt(userName + "  This is your movie List Movie List"
- 			+ movies[i]+ \n);
- 		}
+ 	// 	for( i = 0; i < movies.length;i++){
+ 	// 	input = prompt(userName + "  This is your movie List Movie List"
+ 	// 		+ movies[i]+ \n);
+ 	// 	}
 
 
- 	}
+ 	// }
 
 
 
