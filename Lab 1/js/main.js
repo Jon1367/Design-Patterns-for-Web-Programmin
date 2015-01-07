@@ -6,6 +6,11 @@
 
 var movieList = ["Star Wars",];
 
+var user = {
+	name:""
+};
+
+
 (function(){
 
 
@@ -21,17 +26,24 @@ var movieList = ["Star Wars",];
 
  	var input = 0;
 
- 	prompt(" Hello " + userName + " it's nice to meet you");
+ 	// using object property name setting it equal to userName
+ 	user.name = String(userName);
+
+
+
+ 	prompt(" Hello " + user.name + " it's nice to meet you");
 
  	
 
 
- 	prompt("Welcome " + userName + " your Movie List");
+ 	prompt("Welcome " + user.name + " your Movie List");
 
+ 	// While loop to keep programing looping untill user quits
  	while(input != 3){
 
 
- 		input = prompt(userName + "'s Movie List" + "\n" +
+ 		// Display Infromation and choices
+ 		input = prompt(user.name + "'s Movie List" + "\n" +
  		"----------------------------" + "\n" +
  		 movieList + "\n" +
 		"----------------------------" + "\n" +
@@ -40,6 +52,7 @@ var movieList = ["Star Wars",];
 		"3)Quit");
  		
 
+ 		// if statement to determind what actions to perform
  		if( input == 1){
 
  			movie = prompt("Enter a movie:");
@@ -52,6 +65,7 @@ var movieList = ["Star Wars",];
  				movieList+" " + "\n"+
  				" Enter the number of the movie in the list. Starts at 1 After Star Wars");
 
+ 			// Calling Delete function Sending the index of the movie
  			Delete(dMovie);
 
  		}
@@ -64,25 +78,36 @@ var movieList = ["Star Wars",];
 })();
 function FullName(first, last){
 
+	// Add First and last name and then add them together
 	var fullname = first + " " + last 
 
+	
 	return fullname;
 }
 function Add(m){
 
+	//push into the array
 	movieList.push(m);
 
 }
 function Delete(m){
 
+
+	// Create counter for splice
+	var	counter = 0;
+
+	// Debug number 1 bug that deteles wrong index
 	if(parseInt(m) == 1){
 
-	var counter =  parseInt(m);
+		counter =  parseInt(m);
 
 	}else{
-		var counter =  parseInt(m) - 1;
+
+		// Delete a specfic index
+		counter =  parseInt(m) - 1;
 	}
 
+	//splice the index
 	movieList.splice(m,counter);
 
 }
