@@ -35,7 +35,6 @@ var user = {
 
  	
 
-
  	prompt("Welcome " + user.name + " your Movie List");
 
  	// While loop to keep programing looping untill user quits
@@ -104,10 +103,10 @@ function Delete(m){
 	}else{
 
 		// Delete a specfic index
-		counter =  parseInt(m) - 1;
+		counter =  parseInt(m);
 	}
 
 	//splice the index
-	movieList.splice(m,counter);
+	movieList.splice(m,1);
 
 }
