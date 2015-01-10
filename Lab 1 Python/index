@@ -30,17 +30,15 @@ def userAge(month,day,year):
     daysUntillBday = int(day) - now.day
 
     #check month to see if your birthday has past
-    if monthUntillBday > 1:
+    if now.month != int(month):
         age =int(birthday) - 1
 
-    elif monthUntillBday == 0:
+    elif now.month == int(month):
         #check day of the month to see if your birthday past
-        if now.day > int(day):
-            age = int(birthday)
-        elif now.day == int(day):
-            pass
-        else:
+        if now.day != int(day):
             age = int(birthday) - 1
+        elif now.day == int(day):
+            age = int(birthday)
 
     return age
 
@@ -79,5 +77,4 @@ def main():
 
 
 main()
-
 
