@@ -54,8 +54,6 @@ def main():
     birthDay = raw_input("Enter the day you were born on:")
     birthYear = raw_input("Enter the year you were born in:")
 
-    #Added because i need an array and i didn't have one -__-
-    birthdayArray = [birthMonth,birthDay,birthYear]
 
     userName = fullName(first,last)
 
@@ -63,9 +61,9 @@ def main():
     while int(input) != 3:
 
         input = raw_input("\nHello " + str(userName) + " Welcome to Jon's Program \n" +
-        "DOB:" + str(birthdayArray[0]) +"/" + str(birthdayArray[1])+"/" + str(birthdayArray[2])+"\n"+
+        "DOB:" + str(birthMonth)+"/" + str(birthDay)+"/" + str(birthYear)+"\n"+
         "1) How Old am I and How many Days untill my birthday\n" +
-        "2) Guessing Game\n" +
+        "2) Change DOB:\n" +
         "3) Quit")
 
         if int(input) == 1:
@@ -73,6 +71,10 @@ def main():
             print("\nYou are " + str(userAge(birthMonth,birthDay,birthYear)) + " years old\n"+
             "You have " + str(monthUntillBday) +" months "+
             "and " + str(daysUntillBday) + " days untill your birthday!\n")
+        elif int(input) == 2:
+             birthMonth = raw_input("Enter the number of the month you were born in:")
+             birthDay = raw_input("Enter the day you were born on:")
+             birthYear = raw_input("Enter the year you were born in:")
 
 
 
