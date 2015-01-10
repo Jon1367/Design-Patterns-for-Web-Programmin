@@ -1,0 +1,26 @@
+points = 0
+name = "Bob"
+print name
+
+if name == "Bob":
+    print "you know your name"
+print"bob is is your name"
+
+def greeting():
+    print "hello there"
+    print "how are you?"
+
+greeting()
+
+# To do
+
+grade = 70
+
+if grade > 89:
+    print" You got a A"
+elif grade > 79:
+    print" You got a B"
+elif grade > 69:
+    print " You got a C"
+else:
+    print"F"
