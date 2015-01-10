@@ -7,35 +7,34 @@ now = datetime.datetime.now()
 #Function to add user's first and last name
 def fullName(first,last):
 
-    #var hold user's name
     name = ""
-    # Add user's first and last name
+
     name = first +" "+ last
 
-    #return user's fullname name
     return name
+
 # Function to cacluate User's Age
 def userAge(month,day,year):
 
-    #
+    #create 2 gloabl var to use outside of the funciton
     global monthUntillBday
     global daysUntillBday
 
-
+    #storing a guess of the user birthday
     birthday = now.year - int(year)
 
-    
-    #Store into a variable age
     age = birthday
-    #Gets the months untill your birthday with the user month subtract the current month
+
+    #Gets the months and days untill birthday using mth
     monthUntillBday = int(month) - now.month
-    #Gets the month untll your birthday with the user day subtract the current day
     daysUntillBday = int(day) - now.day
 
+    #check month to see if your birthday has past
     if monthUntillBday > 1:
         age =int(birthday) - 1
 
     elif monthUntillBday == 0:
+        #check day of the month to see if your birthday past
         if now.day > int(day):
             age = int(birthday)
         elif now.day == int(day):
@@ -57,29 +56,27 @@ def main():
     birthDay = raw_input("Enter the day you were born on:")
     birthYear = raw_input("Enter the year you were born in:")
 
+    #Added because i need an array and i didn't have one -__-
+    birthdayArray = [birthMonth,birthDay,birthYear]
 
     userName = fullName(first,last)
 
 
-    while int(input) != 4:
+    while int(input) != 3:
 
-        input = raw_input("Hello " + str(userName) + " Welcome to Jon's Program \n" +
-        "1) How many Days untill my birthday\n" +
-        "2) Guessing Game\n"
-        "3) Age\n" +
-        "4) Quit")
+        input = raw_input("\nHello " + str(userName) + " Welcome to Jon's Program \n" +
+        "DOB:" + str(birthdayArray[0]) +"/" + str(birthdayArray[1])+"/" + str(birthdayArray[2])+"\n"+
+        "1) How Old am I and How many Days untill my birthday\n" +
+        "2) Guessing Game\n" +
+        "3) Quit")
 
         if int(input) == 1:
 
-            print("You are " + str(userAge(birthMonth,birthDay,birthYear)) + " years old\n"+
+            print("\nYou are " + str(userAge(birthMonth,birthDay,birthYear)) + " years old\n"+
             "You have " + str(monthUntillBday) +" months "+
-            "and " + str(daysUntillBday) + " days untill your birthday!")
+            "and " + str(daysUntillBday) + " days untill your birthday!\n")
 
-        elif int(input) == 2:
-            pass
-        elif int(input) == 3:
 
-            age = raw_input("Enter your Age")
 
 main()
 
