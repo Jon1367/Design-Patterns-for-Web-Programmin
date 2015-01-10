@@ -20,31 +20,31 @@ def userAge(month,day,year):
     global monthUntillBday
     global daysUntillBday
 
-    #storing a guess of the user birthday
-    birthday = now.year - int(year)
+    #storing a guess of the user age
+    age = now.year - int(year)
 
-    age = birthday
+
 
     #Gets the months and days untill birthday using mth
     monthUntillBday = int(month) - now.month
     daysUntillBday = int(day) - now.day
 
-    #check month to see if your birthday has past
+    #check month
     if now.month != int(month):
-        age =int(birthday) - 1
+        age -= 1
 
     elif now.month == int(month):
-        #check day of the month to see if your birthday past
+        #check day
         if now.day != int(day):
-            age = int(birthday) - 1
+            age -= 1
         elif now.day == int(day):
-            age = int(birthday)
+            pass
 
     return age
 
 def main():
 
-
+    # hold user choice
     input = 0
 
     first = raw_input("What is your First Name?")
@@ -59,7 +59,7 @@ def main():
 
     userName = fullName(first,last)
 
-
+    #while loop to loop threw the options
     while int(input) != 3:
 
         input = raw_input("\nHello " + str(userName) + " Welcome to Jon's Program \n" +
