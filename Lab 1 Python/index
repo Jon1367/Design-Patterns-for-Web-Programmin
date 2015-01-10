@@ -17,10 +17,14 @@ def fullName(first,last):
 # Function to cacluate User's Age
 def userAge(month,day,year):
 
-    #Get's the user's age based on the year the user was born subtract the current year
+    #
     global monthUntillBday
     global daysUntillBday
+
+
     birthday = now.year - int(year)
+
+    
     #Store into a variable age
     age = birthday
     #Gets the months untill your birthday with the user month subtract the current month
@@ -32,10 +36,12 @@ def userAge(month,day,year):
         age =int(birthday) - 1
 
     elif monthUntillBday == 0:
-        if daysUntillBday > 1:
-            age = int(birthday) -1
-        else:
+        if now.day > int(day):
             age = int(birthday)
+        elif now.day == int(day):
+            pass
+        else:
+            age = int(birthday) - 1
 
     return age
 
