@@ -1,22 +1,31 @@
+# Import's the current Day and Time of the User
 import datetime
 
+#now respent a variable to hold the current date month day year
 now = datetime.datetime.now()
 
+#Function to add user's first and last name
 def fullName(first,last):
 
+    #var hold user's name
     name = ""
-
+    # Add user's first and last name
     name = first +" "+ last
 
+    #return user's fullname name
     return name
+# Function to cacluate User's Age
 def userAge(month,day,year):
 
+    #Get's the user's age based on the year the user was born subtract the current year
+    global monthUntillBday
+    global daysUntillBday
     birthday = now.year - int(year)
-
+    #Store into a variable age
     age = birthday
-
+    #Gets the months untill your birthday with the user month subtract the current month
     monthUntillBday = int(month) - now.month
-
+    #Gets the month untll your birthday with the user day subtract the current day
     daysUntillBday = int(day) - now.day
 
     if monthUntillBday > 1:
@@ -27,7 +36,7 @@ def userAge(month,day,year):
             age = int(birthday) -1
         else:
             age = int(birthday)
-            
+
     return age
 
 def main():
@@ -56,7 +65,8 @@ def main():
 
         if int(input) == 1:
 
-            print(userAge(birthMonth,birthDay,birthYear))
+            print("You are " + str(userAge(birthMonth,birthDay,birthYear)) + " years old\n"+
+            "You have " + str(monthUntillBday) +" months untill your birthday")
 
         elif int(input) == 2:
             pass
