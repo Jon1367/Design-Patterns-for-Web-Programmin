@@ -66,7 +66,8 @@ def main():
         if int(input) == 1:
 
             print("You are " + str(userAge(birthMonth,birthDay,birthYear)) + " years old\n"+
-            "You have " + str(monthUntillBday) +" months untill your birthday")
+            "You have " + str(monthUntillBday) +" months "+
+            "and " + str(daysUntillBday) + " days untill your birthday!")
 
         elif int(input) == 2:
             pass
