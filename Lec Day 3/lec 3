@@ -1,0 +1,18 @@
+import random
+
+class Employee:
+    company = "Full Sail"
+    def __init__(self):
+        print "Employee Created"
+        self.name = "Bob"
+        self.hours = random.randint(1,40)
+
+employees = []
+for i in range(100):
+    employees.append(Employee())
+
+employees[0].name = "Scott"
+employees[1].name = "Dave"
+
+for i in employees:
+    print i.name , str(i.hours) , str(Employee.company)

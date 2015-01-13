@@ -23,8 +23,6 @@ def userAge(month,day,year):
     #storing a guess of the user age
     age = now.year - int(year)
 
-
-
     #Gets the months and days untill birthday using mth
     monthUntillBday = int(month) - now.month
     daysUntillBday = int(day) - now.day
@@ -54,6 +52,7 @@ def main():
     birthDay = raw_input("Enter the day you were born on:")
     birthYear = raw_input("Enter the year you were born in:")
 
+    #input validation
 
     userName = fullName(first,last)
 
