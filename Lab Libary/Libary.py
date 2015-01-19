@@ -6,13 +6,28 @@ class Library:
         self.numberOfSide = 0
         self.total = 0
     def addTotal(self,numDice,numSide):
-        total = 0
-        numSides = random.randint(1,numSide)
-        numDice * numSides
-        total = 0
-class Print:
-    def __init__(self,name,numberOfDice,numberOfSide,totoal):
-        print(name + " rolled" + str(numberOfDice) + " " + str(numberOfSide) +" sided Dice and got " +str(totoal) )
 
+        diceArray = []
+        total = 0
+        print(numSide)
+        print(numDice)
+
+
+        for i in range(numDice):
+
+            dice = random.randint(1, int(numSide))
+            diceArray.append(dice)
+        for i in diceArray:
+            total = total + i
+
+
+        print(total)
+        print(diceArray)
+
+
+        return total
+class Print:
+    def __init__(self,name,numDice,numSide,total):
+        print(name + " rolled " + str(numDice) + " Dice with " + str(numSide) +" sided Dice and got " + str(total))
 
 

@@ -8,9 +8,9 @@ sideDice = raw_input("How many Sides do the dice have:")
 
 new_player = Library()
 new_player.name = name
-new_player.numDice = numDice
-new_player.sideDice = sideDice
-new_player.total = new_player.addTotal(numDice,sideDice)
+new_player.numDice = int(numDice)
+new_player.sideDice = int(sideDice)
+new_player.total = new_player.addTotal(new_player.numDice,new_player.sideDice)
 
 Print(new_player.name,new_player.numDice,new_player.sideDice,new_player.total)
 
