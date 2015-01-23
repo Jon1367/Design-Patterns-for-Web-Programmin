@@ -1,4 +1,6 @@
 class Page(object):
+
+    #Constutor creates the page
     def __init__(self):
         self.title = ""
         self.css = "css/styles.css"
@@ -12,11 +14,12 @@ class Page(object):
     </head>
     <body>
                 '''
+        #closes html mark up
         self.close = '''
     </body>
 </html>
 '''
-
+    # print function to create the html page with all the attributes
     def print_out(self):
         html = self.head + self.body + self.close
         html = html.format(**locals())
