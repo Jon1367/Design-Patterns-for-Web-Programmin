@@ -2,9 +2,8 @@ class Page(object):
     def __init__(self):
         self.title = ""
         self.css = "css/styles.css"
-        self.head = ""
         self.body = ""
-        self.close = '''
+        self.head = '''
 <!DOCTYPE HTML>
 <html>
     <head>
